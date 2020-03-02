@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-    public Rigidbody playerrigidbody;
+    public CharacterController playercontroller;
     public float backforth;
     public float leftright;
 
-    public float moveSpeed = 2.5f;
+    public float moveSpeed = 0.04f;
     public float mouseX, mouseY;
 
     public Vector3 inputVector;
     // Start is called before the first frame update
     void Start()
     {
-        playerrigidbody = GetComponent<Rigidbody>();
+        playercontroller = GetComponent<CharacterController>();
     }
 
     // Update is called once per frame
@@ -32,10 +32,12 @@ public class FirstPersonController : MonoBehaviour
 
         inputVector = transform.forward * backforth;
         inputVector -= transform.right * leftright;
+
+        playercontroller.Move(inputVector * moveSpeed + (Physics.gravity * .3f));
     }
 
     void FixedUpdate()
     {
-        playerrigidbody.velocity = (inputVector * moveSpeed * Time.fixedDeltaTime * 50);
+        
     }
 }
