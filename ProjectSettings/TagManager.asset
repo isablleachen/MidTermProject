@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - item
+  - hen
+  - silkie
+  - chubby
+  - chickenhouse
+  - player
+  - grandpa
   layers:
   - Default
   - TransparentFX
