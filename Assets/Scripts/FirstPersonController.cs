@@ -28,6 +28,7 @@ public class FirstPersonController : MonoBehaviour
     public GameObject bird;
     public GameObject pig;
     public GameObject pighouse;
+    public GameObject plant;
     public float distanceToObject;
     public float distanceToObject2;
 
@@ -68,13 +69,20 @@ public class FirstPersonController : MonoBehaviour
         if (distanceToObject >= Vector3.Distance(this.transform.position, bird.transform.position))
         {
             
-            textshowed.text = "This is just a little bird, not a chicken. ";
+            textshowed.text = "This is just a little bird, not a chicken.";
+            textshowed2.text = null;
+        }
+
+        if (distanceToObject >= Vector3.Distance(this.transform.position, plant.transform.position))
+        {
+
+            textshowed.text = "The owner of this house loves succulent.";
             textshowed2.text = null;
         }
 
         if (distanceToObject >= Vector3.Distance(this.transform.position, pighouse.transform.position))
         {
-            textshowed.text = "Villagers build this hoggery to raise pigs. ";
+            textshowed.text = "Villagers built this hoggery to raise pigs. ";
             textshowed2.text = null;
         }
 
@@ -92,8 +100,8 @@ public class FirstPersonController : MonoBehaviour
 
         if (distanceToObject >= Vector3.Distance(this.transform.position, Drunkard.transform.position))
         {
-            textshowed.text = "Drunkard: No! I found this silkie so now it's mine! ";
-            textshowed2.text = "...Unless you bring me something to eat!";
+            textshowed.text = "Drunkard: Oh! I thought I can eat this silkie! ";
+            textshowed2.text = "...Could you bring me something to eat?";
         }
 
         if (distanceToObject2 >= Vector3.Distance(this.transform.position, Statue.transform.position))
@@ -116,7 +124,7 @@ public class FirstPersonController : MonoBehaviour
 
         if (distanceToObject >= Vector3.Distance(this.transform.position, CansPack.transform.position))
         {
-            textshowed.text = "Someone orders dozens of American sadines.";
+            textshowed.text = "Someone orders dozens of sadines.";
             textshowed2.text = null;
         }
 
@@ -141,7 +149,7 @@ public class FirstPersonController : MonoBehaviour
         if (distanceToObject >= Vector3.Distance(this.transform.position, Salesman.transform.position))
         {
             textshowed.text = "SALESMAN: Do you want any sadine cans? ";
-            textshowed2.text = "These are all imported from America!";
+            textshowed2.text = "These are all imported from Europe!";
         }
     }
 
