@@ -119,7 +119,7 @@ public class FirstPersonController : MonoBehaviour
         if (distanceToObject2 >= Vector3.Distance(this.transform.position, Painter.transform.position))
         {
             textshowed.text = "PAINTER: I don't want to draw it anymore, it's just stupid.";
-            textshowed2.text = "Even a chicken will be laughing at me!";
+            textshowed2.text = "Even a chicken will be laugh at me!";
         }
 
         if (distanceToObject >= Vector3.Distance(this.transform.position, CansPack.transform.position))
@@ -136,7 +136,7 @@ public class FirstPersonController : MonoBehaviour
 
         if (distanceToObject >= Vector3.Distance(this.transform.position, oven.transform.position))
         {
-            textshowed.text = "There's some steamed buns in the oven.";
+            textshowed.text = "There's some steamed bun in the oven.";
             textshowed2.text = null;
         }
 
